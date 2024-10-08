@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import ui_cum_step_definitions.CommonStep;
+import ui_cum_utilities.CommonUtils;
 
 public class LoginPage {
 // Locator
@@ -59,13 +60,14 @@ public class LoginPage {
     	emailReg.sendKeys("vishnuprashant.sv@gmail.com");
     	log.info("Email entered successfuly");
     	 Thread.sleep(2000);
+    	 CommonUtils.getInstances().takeScreenshot();
     	
     }
     public void selectCounty() throws InterruptedException {
     	Select select = new Select(country);
     	select.selectByVisibleText("Hong Kong");
     	Thread.sleep(2000);
-    	
+    	CommonUtils.getInstances().takeScreenshot();
     }
 
 }
