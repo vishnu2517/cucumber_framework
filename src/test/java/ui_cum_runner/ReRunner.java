@@ -7,12 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-plugin = {"pretty","summary", "rerun:target/failed_scenario.txt"},
-features ="src/test/resources/features",
+plugin = {"pretty","summary"}, 
+features ="@target/failed_scenario.txt",
 glue= "ui_cum_step_definitions",
 dryRun = false,
 monochrome = true
 )
-public class TestRunner{
+
+public class ReRunner {
 
 }

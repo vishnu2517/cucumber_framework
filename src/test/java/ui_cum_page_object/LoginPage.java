@@ -41,6 +41,11 @@ public class LoginPage {
 		}
 		return loginInstance;
 	}
+//Getter
+	
+	public WebElement getCountry() {return country;}
+
+	
 
 //Actions
 
@@ -48,6 +53,7 @@ public class LoginPage {
 
 
     public void enterEmail(String username) throws InterruptedException {
+    	CommonUtils.getInstances().highlightElements(Email);
     	Email.sendKeys(username);
     	log.info("User name entered");
     	OkButton.click();
@@ -60,14 +66,7 @@ public class LoginPage {
     	emailReg.sendKeys("vishnuprashant.sv@gmail.com");
     	log.info("Email entered successfuly");
     	 Thread.sleep(2000);
-    	 CommonUtils.getInstances().takeScreenshot();
-    	
+    	 CommonUtils.getInstances().takeScreenshot();  	
     }
-    public void selectCounty() throws InterruptedException {
-    	Select select = new Select(country);
-    	select.selectByVisibleText("Hong Kong");
-    	Thread.sleep(2000);
-    	CommonUtils.getInstances().takeScreenshot();
-    }
-
+	
 }
