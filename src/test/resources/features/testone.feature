@@ -1,6 +1,5 @@
 @tagone
-Feature: 
-  This is to verify the feature is working as expected 
+Feature: This is to verify the feature is working as expected 
 
   @tag1
   Scenario: Login In the application with email and clicking the ok button

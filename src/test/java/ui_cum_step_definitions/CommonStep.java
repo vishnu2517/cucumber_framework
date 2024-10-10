@@ -2,14 +2,11 @@ package ui_cum_step_definitions;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import ui_cum_utilities.CommonUtils;
 import ui_cum_utilities.DriverManager;
-
-
 
 public class CommonStep {
 	
@@ -22,6 +19,7 @@ public static String getScenarioname() {
 public static Logger log = LogManager.getLogger(CommonStep.class);
 
 @Before
+
 	public void beforeScenario(Scenario scenario) {
     	log.info("Starting the Executuion -------->");
 		try {
@@ -41,11 +39,8 @@ public static Logger log = LogManager.getLogger(CommonStep.class);
 	@After
 	public void afterScenario() {
 		log.info("Execution is stopped -------->");
-		DriverManager.getDriver().quit();
+		DriverManager.getDriver().quit();	
+		
 	}
-
-
-
-
 	}
 
